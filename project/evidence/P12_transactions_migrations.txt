@@ -1,0 +1,28 @@
+Команда:
+GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean runP12Check
+
+Результат:
+[OK] V001 запись сохранена: 1
+[OK] схема обновлена: 2
+[OK] корректный пакет целиком добавлен: 3
+[OK] все поля первой строки: Workout[id=2, code=TR-0101, type=Бег, date=2026-10-15, status=PLANNED]
+[OK] ошибка указывает проблемный код: true
+[OK] дубликат откатил весь пакет: 3
+[OK] неверная дата связана с кодом: true
+[OK] ошибка CSV не изменила базу: 3
+[OK] повтор миграции оставил версию 2: 2
+[OK] повтор миграции не изменил данные: 3
+Все проверки P12 пройдены.
+
+BUILD SUCCESSFUL
+
+Регрессия:
+./gradlew runP11First runP11Second runP09ServiceTest runP08Check
+
+Все проверки P11, P09 и P08 пройдены.
+BUILD SUCCESSFUL
+
+Обычный запуск:
+./gradlew run
+
+JavaFX-окно открылось с SQLite-базой после миграции; запуск остановлен Ctrl+C.

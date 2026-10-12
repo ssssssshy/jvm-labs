@@ -1,0 +1,13 @@
+Команда: GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean test
+
+ConfigurationDiagnosticsTest > invalidServiceUrlIsRejectedBeforeNetworkCall() PASSED
+ConfigurationDiagnosticsTest > validExternalConfigurationResolvesRelativePaths() PASSED
+ConfigurationDiagnosticsTest > rotatedLogHasContextButNeverWritesSecretOrExceptionMessage() PASSED
+ConfigurationDiagnosticsTest > invalidTimeoutNamesParameterAndAllowedRange() PASSED
+
+Остальные 10 регрессионных тестов P17/P18 PASSED.
+BUILD SUCCESSFUL in 5s
+
+Проверено: журнал содержит версию, UUID операции, событие, исход и тип ошибки;
+контрольный токен и сообщение исключения отсутствуют; создано не менее двух
+файлов журнала из-за ограничения размера.

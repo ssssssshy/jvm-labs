@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.npi.workouttracker.ui.MainController"
+      spacing="12"
+      styleClass="root-pane">
+    <Label text="Трекер тренировок" styleClass="page-title" />
+    <Label fx:id="countLabel" text="Записей: 0" styleClass="count-label" />
+
+    <TableView fx:id="workoutTable" accessibleText="Таблица тренировок" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="80" />
+            <TableColumn fx:id="typeColumn" text="Тип тренировки" prefWidth="260" />
+            <TableColumn fx:id="dateColumn" text="Дата" prefWidth="180" />
+            <TableColumn fx:id="statusColumn" text="Состояние" prefWidth="200" />
+            <TableColumn fx:id="durationColumn" text="Минуты" prefWidth="100" />
+        </columns>
+        <placeholder>
+            <Label text="Тренировки ещё не добавлены" />
+        </placeholder>
+    </TableView>
+
+    <GridPane hgap="10" vgap="6" styleClass="form-grid">
+        <columnConstraints>
+            <ColumnConstraints minWidth="210" hgrow="ALWAYS" />
+            <ColumnConstraints minWidth="170" hgrow="SOMETIMES" />
+            <ColumnConstraints minWidth="190" hgrow="SOMETIMES" />
+            <ColumnConstraints minWidth="100" hgrow="SOMETIMES" />
+        </columnConstraints>
+        <Label text="_Тип тренировки" mnemonicParsing="true" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="_Дата" mnemonicParsing="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label text="_Состояние" mnemonicParsing="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <Label text="_Длительность" mnemonicParsing="true" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+        <TextField fx:id="typeField" accessibleText="Тип тренировки, обязательное поле"
+                   accessibleHelp="Введите от 1 до 60 символов" promptText="Например, кардио"
+                   GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <DatePicker fx:id="dateField" accessibleText="Дата тренировки, обязательное поле"
+                    maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <ComboBox fx:id="statusField" accessibleText="Состояние тренировки, обязательное поле"
+                  maxWidth="Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="durationField" accessibleText="Длительность в минутах"
+                   promptText="60" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label fx:id="messageLabel" text="Заполните форму и добавьте тренировку."
+               accessibleText="Состояние формы: можно добавить тренировку" wrapText="true"
+               GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="2" />
+    </GridPane>
+
+    <HBox spacing="10" styleClass="actions-row">
+        <Button fx:id="addButton" text="Добавить" accessibleText="Добавить тренировку"
+                defaultButton="true" onAction="#handleAdd" />
+        <Button fx:id="changeStatusButton" text="Применить состояние" onAction="#handleChangeStatus" />
+        <Button fx:id="removeButton" text="Удалить выбранную" onAction="#handleRemove" />
+    </HBox>
+
+    <FlowPane hgap="10" vgap="8" prefWrapLength="800">
+        <Label text="Фильтр по типу" />
+        <TextField fx:id="filterField" promptText="Например, бег" prefWidth="160" />
+        <Label text="Период" />
+        <DatePicker fx:id="periodFromField" prefWidth="140" />
+        <DatePicker fx:id="periodToField" prefWidth="140" />
+        <Button fx:id="totalButton" text="Рассчитать время" onAction="#handleCalculateTotal" />
+        <Label fx:id="totalLabel" text="Суммарная длительность: 0 мин." />
+    </FlowPane>
+
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="audit-row">
+        <Button fx:id="startAuditButton" text="Проверить историю" onAction="#handleStartAudit" />
+        <Button fx:id="cancelAuditButton" text="Отменить проверку" disable="true" onAction="#handleCancelAudit" />
+        <ProgressBar fx:id="auditProgress" prefWidth="220" progress="0" />
+        <Label fx:id="auditMessageLabel" text="Проверка истории не запущена." wrapText="true" HBox.hgrow="ALWAYS" />
+    </HBox>
+</VBox>

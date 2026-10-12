@@ -1,0 +1,25 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :runP09ServiceTest
+[OK] новая запись сохранена: 1
+[OK] первый устойчивый id: 1
+[OK] первый репозиторий содержит запись: 1
+[OK] второй репозиторий независим: 0
+[OK] повторный id отклонён: true
+[OK] после отказа хранилище не изменилось: [Workout[id=17, type=Йога, date=2026-10-09, status=PLANNED]]
+[OK] после сортировки строка сменилась: Аквааэробика
+[OK] обновлена та же запись по id: 1
+[OK] состояние изменено: COMPLETED
+[OK] причина отказа понятна: Выберите дату тренировки.
+[OK] отказ без даты не изменил хранилище: 0
+Все проверки P09 пройдены без JavaFX.
+
+BUILD SUCCESSFUL in 1s
+5 actionable tasks: 5 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

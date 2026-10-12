@@ -1,0 +1,24 @@
+Команды:
+GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean test jar runServiceLoaderJar
+java -jar build/libs/workout-tracker.jar
+jar tf build/libs/workout-tracker.jar
+jdeps --ignore-missing-deps --print-module-deps build/libs/workout-tracker.jar
+
+ServiceLoaderTest > discoversTwoProvidersAndExecutesTheirContracts() PASSED
+Остальные 18 регрессионных тестов P17–P20 PASSED.
+
+API загружен: jdk.internal.loader.ClassLoaders$AppClassLoader
+[OK] status-summary | Сводка по состояниям | AppClassLoader | Запланировано: 2, выполнено: 1
+[OK] type-summary | Сводка по типам | AppClassLoader | Бег: 2, Йога: 1
+Все проверки P21 пройдены: ServiceLoader нашёл два поставщика.
+
+В JAR подтверждены:
+- META-INF/MANIFEST.MF
+- META-INF/services/ru.npi.workouttracker.extension.WorkoutReportProvider
+- WorkoutReportProvider.class
+- StatusWorkoutReportProvider.class
+- TypeWorkoutReportProvider.class
+- FXML, CSS и SQL-миграции
+
+Модули JDK: java.base,java.desktop,java.net.http,java.sql,jdk.httpserver
+BUILD SUCCESSFUL in 6s

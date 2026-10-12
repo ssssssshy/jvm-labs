@@ -1,0 +1,43 @@
+Практика P01 — протокол проверки
+Дата проверки: 2026-10-04
+
+1. Среда
+
+$ java -version
+openjdk version "25.0.4.1" 2026-08-18
+OpenJDK Runtime Environment (Red_Hat-25.0.4.1.1-1)
+
+$ javac -version
+javac 25.0.4.1
+
+2. Штатная сборка и запуск
+
+$ ./gradlew clean run
+> Task :compileJava
+> Task :run
+Здравствуйте! Это проект «Трекер тренировок».
+Пользователь: человек, который ведёт журнал тренировок.
+Задача: сохранять историю занятий и контролировать объём нагрузки.
+
+BUILD SUCCESSFUL in 31s
+
+3. Контролируемый отказ
+
+$ java -cp build/classes/java/main ru.npi.workouttracker.MissingClass
+Error: Could not find or load main class ru.npi.workouttracker.MissingClass
+Caused by: java.lang.ClassNotFoundException: ru.npi.workouttracker.MissingClass
+Код завершения: 1
+
+4. Повтор после исправления
+
+$ java -cp build/classes/java/main ru.npi.workouttracker.HelloWorld
+Здравствуйте! Это проект «Трекер тренировок».
+Пользователь: человек, который ведёт журнал тренировок.
+Задача: сохранять историю занятий и контролировать объём нагрузки.
+Код завершения: 0
+
+5. Проверка структуры сдаваемого комплекта
+
+$ python ../../2026/04_Сквозной_проект/check_project.py .
+ПРОВЕРКА ПРОЙДЕНА
+Исходных файлов Java: 1

@@ -1,0 +1,162 @@
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :compileKotlin UP-TO-DATE
+> Task :compileJava UP-TO-DATE
+> Task :processResources
+> Task :classes
+
+> Task :runP05Check
+Oct 10, 2026 1:47:47 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @68150de6'
+[OK] при первом запуске одна строка: 1
+[OK] одно нажатие добавляет одну строку: 2
+[OK] поле очищается после успеха: 
+[OK] пустой ввод не меняет таблицу: 2
+[OK] пустой ввод блокирует добавление: true
+[OK] повторный корректный ввод добавлен: 3
+[OK] снимок сохранён: ../labs/P05/screenshots/success.png
+Все проверки P05 пройдены.
+
+> Task :runP06Check
+Oct 10, 2026 1:47:50 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @362c537a'
+[OK] начальный счётчик: Записей: 1
+[OK] без выбора удаление недоступно: true
+[OK] пустой ввод блокирует добавление: true
+[OK] корректный ввод включает добавление: false
+[OK] таблица получила уведомление о добавлении: 2
+[OK] привязка увеличила счётчик: Записей: 2
+[OK] при выборе удаление доступно: false
+[OK] новое состояние видно в таблице: IN_PROGRESS
+[OK] запись заменена новым объектом: false
+[OK] после удаления осталась одна строка: 1
+[OK] привязка уменьшила счётчик: Записей: 1
+[OK] выделение очищено: null
+[OK] после удаления кнопка недоступна: true
+[OK] пустой список: 0
+[OK] счётчик пустого списка: Записей: 0
+[OK] финальный счётчик для снимка: Записей: 2
+[OK] снимок сохранён: ../labs/P06/screenshots/bindings.png
+Все проверки P06 пройдены.
+
+> Task :runP07Check
+Oct 10, 2026 1:47:54 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @9adbda8'
+[OK] FXML загрузил контроллер: true
+[OK] поле типа связано: true
+[OK] поле даты связано: true
+[OK] поле состояния связано: true
+[OK] начальная строка: 1
+[OK] обработчик FXML добавил строку: 2
+[OK] счётчик обновился: Записей: 2
+[OK] состояние заменено через контроллер: IN_PROGRESS
+[OK] повреждённый fx:id воспроизвёл LoadException
+[OK] снимок сохранён: ../labs/P07/screenshots/fxml-form.png
+Все проверки P07 пройдены.
+
+> Task :runP08Check
+Oct 10, 2026 1:47:57 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @72c43a8e'
+[OK] начальный фокус: TextField[id=typeField, styleClass=text-input text-field]
+[OK] кнопка Enter по умолчанию: true
+[OK] доступное имя поля: true
+[OK] пустая строка не сохранена: 1
+[OK] текстовое сообщение об ошибке: true
+[OK] пробелы не сохранены: 1
+[OK] ошибка не только цветом: true
+[OK] слишком длинное значение не сохранено: 1
+[OK] ограничение 60 символов объяснено: true
+[OK] без даты запись не сохранена: 1
+[OK] верный тип не очищен: Кардио
+[OK] сообщение о дате: Выберите дату тренировки.
+[OK] исправленный ввод сохранён без перезапуска: 2
+[OK] дубль после ошибки не создан: 1
+[OK] без состояния запись не сохранена: 2
+[OK] доменное исключение: Тип тренировки не может быть пустым
+[OK] Tab перевёл фокус к дате: DatePicker[id=dateField, styleClass=combo-box-base date-picker]
+[OK] Shift+Tab вернул фокус к типу: TextField[id=typeField, styleClass=text-input text-field]
+[OK] сценарий только с клавиатуры: 3
+[OK] кнопка осталась доступной: false
+[OK] снимок сохранён: ../labs/P08/screenshots/validation.png
+Все проверки P08 пройдены.
+
+> Task :runP13Check
+Oct 10, 2026 1:48:01 PM com.sun.javafx.application.PlatformImpl startup
+WARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @575062f3'
+[OK] повторный запуск запрещён: true
+[OK] отмена доступна: false
+[OK] поток JavaFX обработал импульс во время Task: true
+[OK] отмена отличается от ошибки: true
+[OK] неполный результат не опубликован: null
+[OK] повтор после отмены доступен: false
+[OK] успех отличается от отмены: true
+[OK] прогресс завершён: 1.0
+[OK] полный результат опубликован: 1
+[OK] кнопка восстановлена после успеха: false
+[OK] снимок сохранён: ../labs/P13/screenshots/background-task.png
+[OK] отказ указывает проблемный код: true
+[OK] при отказе результат не опубликован: null
+Все проверки P13 пройдены.
+
+> Task :jar
+> Task :compileTestKotlin NO-SOURCE
+> Task :compileTestJava UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+ReleaseAcceptanceTest > allFiveMiniSpecificationScenariosAreObservable() PASSED
+
+ReleaseAcceptanceTest > invalidDurationAndPeriodPreserveData() PASSED
+
+WorkoutServiceJUnitTest > invalidCreateDoesNotChangeRepository() PASSED
+
+WorkoutServiceJUnitTest > eachTestOwnsItsRepositoryFixture() PASSED
+
+AppDirectoriesTest > firstRunCreatesReusableExternalConfiguration() PASSED
+
+AppDirectoriesTest > environmentOverrideKeepsDataOutsideInstallation() PASSED
+
+ConfigurationDiagnosticsTest > invalidServiceUrlIsRejectedBeforeNetworkCall() PASSED
+
+ConfigurationDiagnosticsTest > validExternalConfigurationResolvesRelativePaths() PASSED
+
+ConfigurationDiagnosticsTest > rotatedLogHasContextButNeverWritesSecretOrExceptionMessage() PASSED
+
+ConfigurationDiagnosticsTest > invalidTimeoutNamesParameterAndAllowedRange() PASSED
+
+WorkoutTest > rejectsBlankType() PASSED
+
+WorkoutTest > statusChangeKeepsIdentityAndOtherFields() PASSED
+
+ServiceLoaderTest > discoversTwoProvidersAndExecutesTheirContracts() PASSED
+
+SqliteBackupServiceTest > restoreCannotOverwriteWorkingDatabase() PASSED
+
+SqliteBackupServiceTest > restoreUsesSeparateCopyAndMatchesBackupRecords() PASSED
+
+SqliteBackupServiceTest > corruptBackupIsRejectedBeforeRestoreTargetAppears() PASSED
+
+SqliteBackupServiceTest > backupIsReturnedOnlyAfterIntegrityAndReadCheck() PASSED
+
+SqliteWorkoutRepositoryTest > newTemporaryDatabaseReceivesCurrentSchema() PASSED
+
+SqliteWorkoutRepositoryTest > duplicateInBatchRollsBackEveryRow() PASSED
+
+WorkoutTypeDirectoryIntegrationTest > brokenJsonDoesNotOverwriteVerifiedCache() PASSED
+
+KotlinInteropTest > javaCallsKotlinFunctionWithStableSignature() PASSED
+
+KotlinInteropTest > kotlinNonNullContractRejectsJavaNull() PASSED
+
+MainUserRouteTest > userFiltersHistoryAndCalculatesDurationForPeriod() PASSED
+
+MainUserRouteTest > fxmlAndCssResourcesLoadFromClasspath() PASSED
+
+MainUserRouteTest > userAddsWorkoutThroughFxmlFormWithoutSleep() PASSED
+
+MainUserRouteTest > userInputTravelsFromFxmlToTemporarySqlite() PASSED
+
+BUILD SUCCESSFUL in 22s
+11 actionable tasks: 8 executed, 3 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

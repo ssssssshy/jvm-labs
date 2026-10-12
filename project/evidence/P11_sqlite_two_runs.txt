@@ -1,0 +1,23 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+
+> Task :runP11First
+[OK] вставка и чтение вернули все поля: Workout[id=1, code=TR-0001, type=Интервальная тренировка О'Нила, date=2026-10-14, status=PLANNED]
+[OK] апостроф сохранён целиком: Интервальная тренировка О'Нила
+[OK] код сформирован: TR-0001
+[OK] дубликат кода преобразован в понятный отказ: true
+[OK] отказ не изменил базу: [Workout[id=1, code=TR-0001, type=Интервальная тренировка О'Нила, date=2026-10-14, status=PLANNED]]
+Первый запуск завершён; файл SQLite оставлен для повторного запуска.
+
+> Task :runP11Second
+[OK] после перезапуска найдена одна запись: 1
+[OK] текст с апострофом пережил перезапуск: Интервальная тренировка О'Нила
+[OK] дата восстановлена из SQLite TEXT: 2026-10-14
+[OK] код и состояние восстановлены: TR-0001/PLANNED
+Второй запуск подтвердил сохранность данных.
+
+BUILD SUCCESSFUL in 2s
+5 actionable tasks: 5 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

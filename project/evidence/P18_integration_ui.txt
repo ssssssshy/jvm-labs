@@ -1,0 +1,14 @@
+Команда: GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean test
+
+WorkoutServiceJUnitTest > invalidCreateDoesNotChangeRepository() PASSED
+WorkoutServiceJUnitTest > eachTestOwnsItsRepositoryFixture() PASSED
+WorkoutTest > rejectsBlankType() PASSED
+WorkoutTest > statusChangeKeepsIdentityAndOtherFields() PASSED
+SqliteWorkoutRepositoryTest > newTemporaryDatabaseReceivesCurrentSchema() PASSED
+SqliteWorkoutRepositoryTest > duplicateInBatchRollsBackEveryRow() PASSED
+WorkoutTypeDirectoryIntegrationTest > brokenJsonDoesNotOverwriteVerifiedCache() PASSED
+MainUserRouteTest > fxmlAndCssResourcesLoadFromClasspath() PASSED
+MainUserRouteTest > userAddsWorkoutThroughFxmlFormWithoutSleep() PASSED
+MainUserRouteTest > userInputTravelsFromFxmlToTemporarySqlite() PASSED
+
+BUILD SUCCESSFUL in 5s

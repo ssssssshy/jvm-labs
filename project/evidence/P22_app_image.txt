@@ -1,0 +1,32 @@
+Среда:
+jpackage 25.0.4.1
+Платформа: Linux x64
+
+Сборка:
+GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean test packageAppImage
+21 тест PASSED.
+BUILD SUCCESSFUL.
+
+Первый запуск без Gradle/IDE:
+WORKOUT_HOME=/tmp/petrosyan-p22-smoke.oyLhSr build/package/WorkoutTracker/bin/WorkoutTracker --smoke-test
+SMOKE_OK config=/tmp/petrosyan-p22-smoke.oyLhSr/config/application.properties database=/tmp/petrosyan-p22-smoke.oyLhSr/data/workouts.db records=1 fxml=jar
+
+Повторный запуск:
+SMOKE_OK config=/tmp/petrosyan-p22-smoke.oyLhSr/config/application.properties database=/tmp/petrosyan-p22-smoke.oyLhSr/data/workouts.db records=1 fxml=jar
+
+Запуск без системной Java в PATH:
+PATH=/nonexistent WORKOUT_HOME=/tmp/petrosyan-p22-smoke.oyLhSr build/package/WorkoutTracker/bin/WorkoutTracker --smoke-test
+SMOKE_OK config=/tmp/petrosyan-p22-smoke.oyLhSr/config/application.properties database=/tmp/petrosyan-p22-smoke.oyLhSr/data/workouts.db records=1 fxml=jar
+
+В пользовательском каталоге созданы:
+config/application.properties
+data/workouts.db
+logs/workout-0.log
+
+В каталоге app-image нет *.db, пользовательского application.properties и *.log.
+Размер app-image: 277 MiB.
+Размер архива: 112 MiB.
+SHA-256: 474a9444227075f27d9ea27c97997ffa08f188f078fada545c4126f9802090a9
+
+Ограничение: отдельная чистая VM не использовалась; выполнена локальная изоляция
+пользовательских данных и запуск при PATH=/nonexistent.

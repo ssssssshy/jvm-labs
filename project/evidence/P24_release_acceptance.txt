@@ -1,0 +1,32 @@
+P24 release acceptance — WorkoutTracker 1.0.0
+
+Environment:
+  Linux 7.2.7-200.fc44.x86_64, x86_64
+  OpenJDK 25.0.4.1
+
+Build:
+  ./gradlew clean test packageAppImage
+  BUILD SUCCESSFUL
+  26 tests passed
+
+Acceptance:
+  five mini-specification scenarios passed in ReleaseAcceptanceTest
+  JavaFX filter and period total passed in MainUserRouteTest
+  invalid duration and invalid period rejected without changing data
+  offline cache scenario passed in runCacheOfflineDemo
+  backup integrity and separate restore passed in SqliteBackupServiceTest
+
+App-image:
+  first launch:  SMOKE_OK, records=1, fxml=jar
+  second launch: SMOKE_OK, records=1, fxml=jar
+  PATH=/nonexistent: SMOKE_OK, records=1, fxml=jar
+  user data: /tmp/petrosyan-p24-acceptance
+  image size: 279 MiB
+
+Checksums:
+  JAR bb6e7424aeaff877b0314c1454cd0f8cd1fa6f71bce609df9bb7de00efe5b444
+  launcher f7c6d69daa7d6d707d5f0a2235f841b5a181d1aab1c554a147f5a1e8c7138261
+
+Honest limitation:
+  independent handoff to another student was not performed; a clean-user-directory
+  launch using only docs/handoff-1.0.0.md was used as the local substitute.

@@ -1,0 +1,24 @@
+> Task :clean UP-TO-DATE
+> Task :compileJava
+> Task :processResources
+> Task :classes
+
+> Task :runReflectionDemo
+[OK] найдены две аннотированные операции: 2
+[OK] русское описание create: Добавить тренировку
+[OK] русское описание changeStatus: Изменить состояние тренировки
+[OK] метод без аннотации пропущен: false
+[OK] CLASS retention не видна через reflection: null
+[OK] прямой и proxy-вызовы вернули одинаковый результат: Workout[id=1, type=Кардио, date=2026-10-13, status=PLANNED]
+[OK] технические вызовы не исказили метрику: 1
+[OK] equals остался рефлексивным: true
+[OK] вторая предметная операция выполнена: COMPLETED
+[OK] два предметных вызова учтены: 2
+[OK] proxy сохранил тип исходного исключения: class java.lang.IllegalArgumentException
+[OK] proxy сохранил причину отказа: Выберите дату тренировки.
+[OK] неудачный предметный вызов тоже учтён: 3
+Все проверки P10 пройдены.
+
+BUILD SUCCESSFUL in 2s
+4 actionable tasks: 3 executed, 1 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

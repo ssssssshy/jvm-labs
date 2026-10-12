@@ -1,0 +1,13 @@
+Команда: GRADLE_USER_HOME=/tmp/petrosyan-gradle ./gradlew clean test
+
+SqliteBackupServiceTest > restoreCannotOverwriteWorkingDatabase() PASSED
+SqliteBackupServiceTest > restoreUsesSeparateCopyAndMatchesBackupRecords() PASSED
+SqliteBackupServiceTest > corruptBackupIsRejectedBeforeRestoreTargetAppears() PASSED
+SqliteBackupServiceTest > backupIsReturnedOnlyAfterIntegrityAndReadCheck() PASSED
+
+Остальные 14 регрессионных тестов P17–P19 PASSED.
+BUILD SUCCESSFUL in 5s
+
+Проверено: backup открывается отдельным соединением, integrity_check возвращает ok,
+версия схемы и две контрольные записи прочитаны; восстановленная копия имеет тот же
+SHA-256. Добавленная после backup третья запись осталась только в рабочей базе.

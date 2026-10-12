@@ -1,0 +1,77 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.1.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources
+> Task :processTestResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :compileTestKotlin NO-SOURCE
+> Task :compileTestJava
+> Task :testClasses
+
+> Task :test
+
+ReleaseAcceptanceTest > allFiveMiniSpecificationScenariosAreObservable() PASSED
+
+ReleaseAcceptanceTest > invalidDurationAndPeriodPreserveData() PASSED
+
+WorkoutServiceJUnitTest > invalidCreateDoesNotChangeRepository() PASSED
+
+WorkoutServiceJUnitTest > eachTestOwnsItsRepositoryFixture() PASSED
+
+AppDirectoriesTest > firstRunCreatesReusableExternalConfiguration() PASSED
+
+AppDirectoriesTest > environmentOverrideKeepsDataOutsideInstallation() PASSED
+
+ConfigurationDiagnosticsTest > invalidServiceUrlIsRejectedBeforeNetworkCall() PASSED
+
+ConfigurationDiagnosticsTest > validExternalConfigurationResolvesRelativePaths() PASSED
+
+ConfigurationDiagnosticsTest > rotatedLogHasContextButNeverWritesSecretOrExceptionMessage() PASSED
+
+ConfigurationDiagnosticsTest > invalidTimeoutNamesParameterAndAllowedRange() PASSED
+
+WorkoutTest > rejectsBlankType() PASSED
+
+WorkoutTest > statusChangeKeepsIdentityAndOtherFields() PASSED
+
+ServiceLoaderTest > discoversTwoProvidersAndExecutesTheirContracts() PASSED
+
+SqliteBackupServiceTest > restoreCannotOverwriteWorkingDatabase() PASSED
+
+SqliteBackupServiceTest > restoreUsesSeparateCopyAndMatchesBackupRecords() PASSED
+
+SqliteBackupServiceTest > corruptBackupIsRejectedBeforeRestoreTargetAppears() PASSED
+
+SqliteBackupServiceTest > backupIsReturnedOnlyAfterIntegrityAndReadCheck() PASSED
+
+SqliteWorkoutRepositoryTest > newTemporaryDatabaseReceivesCurrentSchema() PASSED
+
+SqliteWorkoutRepositoryTest > duplicateInBatchRollsBackEveryRow() PASSED
+
+WorkoutTypeDirectoryIntegrationTest > brokenJsonDoesNotOverwriteVerifiedCache() PASSED
+
+KotlinInteropTest > javaCallsKotlinFunctionWithStableSignature() PASSED
+
+KotlinInteropTest > kotlinNonNullContractRejectsJavaNull() PASSED
+
+MainUserRouteTest > userFiltersHistoryAndCalculatesDurationForPeriod() PASSED
+
+MainUserRouteTest > fxmlAndCssResourcesLoadFromClasspath() PASSED
+
+MainUserRouteTest > userAddsWorkoutThroughFxmlFormWithoutSleep() PASSED
+
+MainUserRouteTest > userInputTravelsFromFxmlToTemporarySqlite() PASSED
+
+> Task :check
+> Task :build
+
+BUILD SUCCESSFUL in 21s
+9 actionable tasks: 9 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

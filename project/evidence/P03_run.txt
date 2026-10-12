@@ -1,0 +1,33 @@
+Практика P03 — протокол проверки
+Дата проверки: 2026-10-04
+
+Прогноз до запуска
+
+- корректные поля: объект создаётся;
+- withStatus(IN_PROGRESS): исходная запись остаётся PLANNED, создаётся новая запись;
+- id=-1 и пустой тип: IllegalArgumentException;
+- отсутствующие дата и состояние: NullPointerException.
+
+Фактический запуск
+
+$ ./gradlew clean runDomainDemo
+[OK] пробелы по краям удалены: Силовая тренировка
+[OK] исходное состояние сохранено: PLANNED
+[OK] новое состояние установлено: IN_PROGRESS
+[OK] идентификатор сохранён: 17
+[OK] тип сохранён: Силовая тренировка
+[OK] дата сохранена: 2026-09-15
+[OK] withStatus вернул новую запись
+[OK] отрицательный id: получена IllegalArgumentException
+[OK] пустой тип: получена IllegalArgumentException
+[OK] отсутствующая дата: получена NullPointerException
+[OK] отсутствующее состояние: получена NullPointerException
+Исходная запись: Workout[id=17, type=Силовая тренировка, date=2026-09-15, status=PLANNED]
+Передана в работу: Workout[id=17, type=Силовая тренировка, date=2026-09-15, status=IN_PROGRESS]
+Все проверки P03 пройдены.
+
+BUILD SUCCESSFUL in 3s
+
+Вывод: IllegalArgumentException означает, что переданное значение не соответствует
+правилу поля. NullPointerException с предметным сообщением фиксирует отсутствие
+обязательного значения. В обоих случаях запись Workout не публикуется.

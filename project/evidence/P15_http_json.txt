@@ -1,0 +1,14 @@
+Команда: ./gradlew clean runHttpJsonDemo
+
+[OK] HTTP 200 и JSON приняты: 2
+[OK] поля DTO преобразованы: WorkoutTypeReference[code=WT-RUN, name=Бег, recommendedMinutes=30]
+[OK] ошибка HTTP отличается: true
+[OK] HTTP 500 не изменил список: 2 записи
+[OK] ошибка JSON отличается: true
+[OK] повреждённый JSON не изменил список: 2 записи
+[OK] порт доступен после остановки
+[OK] повторный HTTP-запуск работает: 2
+Все проверки P15 пройдены.
+BUILD SUCCESSFUL
+
+Регрессии P14 и P12: BUILD SUCCESSFUL.

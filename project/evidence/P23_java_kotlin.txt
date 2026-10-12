@@ -1,0 +1,18 @@
+P23 Java/Kotlin interoperability
+
+Command:
+  ./gradlew clean test runKotlinInteropDemo
+
+Result:
+  BUILD SUCCESSFUL
+  23 tests passed
+  [OK] Java вызвала Kotlin: Интервальный бег — выполнена
+  [OK] Kotlin прочитал Java record и enum: ru.npi.workouttracker.domain.Workout, COMPLETED
+
+JVM signature:
+  public static final java.lang.String caption(ru.npi.workouttracker.domain.Workout);
+
+Contracts covered by KotlinInteropTest:
+  - Java calls the generated static Kotlin entry point;
+  - Kotlin reads the Java record and enum;
+  - a Java null is rejected at the Kotlin non-null boundary.

@@ -1,0 +1,32 @@
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+
+> Task :runP08Check
+[OK] начальный фокус: TextField[id=typeField, styleClass=text-input text-field]
+[OK] кнопка Enter по умолчанию: true
+[OK] доступное имя поля: true
+[OK] пустая строка не сохранена: 1
+[OK] текстовое сообщение об ошибке: true
+[OK] пробелы не сохранены: 1
+[OK] ошибка не только цветом: true
+[OK] слишком длинное значение не сохранено: 1
+[OK] ограничение 60 символов объяснено: true
+[OK] без даты запись не сохранена: 1
+[OK] верный тип не очищен: Кардио
+[OK] сообщение о дате: Выберите дату тренировки.
+[OK] исправленный ввод сохранён без перезапуска: 2
+[OK] дубль после ошибки не создан: 1
+[OK] без состояния запись не сохранена: 2
+[OK] доменное исключение: Тип тренировки не может быть пустым
+[OK] Tab перевёл фокус к дате: DatePicker[id=dateField, styleClass=combo-box-base date-picker]
+[OK] Shift+Tab вернул фокус к типу: TextField[id=typeField, styleClass=text-input text-field]
+[OK] сценарий только с клавиатуры: 3
+[OK] кнопка осталась доступной: false
+[OK] снимок сохранён: ../labs/P08/screenshots/validation.png
+Все проверки P08 пройдены.
+
+BUILD SUCCESSFUL in 3s
+4 actionable tasks: 4 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.1.0/userguide/configuration_cache_enabling.html

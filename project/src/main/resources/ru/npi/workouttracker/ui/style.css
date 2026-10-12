@@ -1,0 +1,51 @@
+.root-pane {
+    -fx-padding: 20;
+    -fx-background-color: #f8fafc;
+    -fx-font-family: "SansSerif";
+}
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #172b4d;
+}
+
+.count-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #344054;
+}
+
+.table-view {
+    -fx-min-height: 220;
+}
+
+.form-grid {
+    -fx-padding: 12 0 0 0;
+}
+
+.actions-row .button {
+    -fx-min-width: 135;
+}
+
+.audit-row {
+    -fx-padding: 8 0 0 0;
+}
+
+.audit-row .button {
+    -fx-min-width: 160;
+}
+
+.message-success {
+    -fx-text-fill: #067647;
+}
+
+.message-error {
+    -fx-text-fill: #b42318;
+    -fx-font-weight: bold;
+}
+
+.invalid-field {
+    -fx-border-color: #b42318;
+    -fx-border-width: 2;
+    -fx-border-radius: 4;
+}
